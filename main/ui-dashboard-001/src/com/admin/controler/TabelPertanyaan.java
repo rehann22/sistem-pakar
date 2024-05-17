@@ -5,14 +5,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JTabbedPane;
 import javax.swing.JTable;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import javax.swing.SwingConstants;
-import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import koneksi.db.ConnectionDb;
 
@@ -75,6 +71,7 @@ public class TabelPertanyaan {
                   tabelPertanyaan.getColumnModel().getColumn(1).setMinWidth(0);
                   tabelPertanyaan.getColumnModel().getColumn(1).setWidth(0);
                   tabelPertanyaan.getColumnModel().getColumn(1).setPreferredWidth(0);
+                  
                   conn.close();
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -126,21 +123,6 @@ public class TabelPertanyaan {
                   // Mendapatkan model tabel
                   javax.swing.table.TableModel model = tabelPertanyaan.getModel();
 
-                  // Iterasi melalui setiap baris dalam tabel
-//                  for (int i = 0; i < model.getRowCount(); i++) {
-//                        // Memeriksa nilai centang di kolom 3
-//                        Boolean isSelected = (Boolean) model.getValueAt(i, 3);
-//                        if (isSelected) {
-//                            // Jika dipilih, ambil nilai kode gejala dari kolom 1
-//                            String kodeGejala = (String) model.getValueAt(i, 1);
-//                            kode += "kode_gejala LIKE '%" + kodeGejala + "%' AND ";
-//
-//                              System.out.println(kodeGejala);
-//                              System.out.println(kode);
-//                        }
-//                  }
-
-//                  int selectedCount = 0;
                   for (int i = 0; i < model.getRowCount(); i++) {
                       Boolean isSelected = (Boolean) model.getValueAt(i, 3); // Asumsi kolom ke-3 adalah kolom centang
                       if (isSelected != null && isSelected) {
@@ -205,4 +187,5 @@ public class TabelPertanyaan {
             }
 
       }
+      
 }

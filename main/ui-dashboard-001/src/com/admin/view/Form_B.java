@@ -8,6 +8,7 @@ import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.JTable;
 
 public class Form_B extends javax.swing.JPanel {
 
@@ -23,7 +24,8 @@ public class Form_B extends javax.swing.JPanel {
           p.setBackground(Color.WHITE);
           spTable.setCorner(JScrollPane.UPPER_RIGHT_CORNER, p);
     }
-
+    
+    
     @SuppressWarnings("unchecked")
       // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
       private void initComponents() {
@@ -32,9 +34,10 @@ public class Form_B extends javax.swing.JPanel {
             jLabel1 = new javax.swing.JLabel();
             spTable = new javax.swing.JScrollPane();
             tabel_gejala = new com.raven.swing.Table();
-            buttonGradient1 = new swing.ButtonGradient();
-            buttonGradient2 = new swing.ButtonGradient();
-            buttonGradient3 = new swing.ButtonGradient();
+            btn_tambah = new swing.ButtonGradient();
+            btn_hapus = new swing.ButtonGradient();
+            btn_ubah = new swing.ButtonGradient();
+            btn_refresh = new javax.swing.JLabel();
 
             setBackground(new java.awt.Color(242, 242, 242));
             setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -67,25 +70,76 @@ public class Form_B extends javax.swing.JPanel {
             });
             spTable.setViewportView(tabel_gejala);
 
-            panelBorder.add(spTable, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 870, 480));
+            panelBorder.add(spTable, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 870, 460));
 
-            buttonGradient1.setText("Tambah");
-            panelBorder.add(buttonGradient1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 30, 110, 30));
+            btn_tambah.setText("Tambah");
+            btn_tambah.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        btn_tambahActionPerformed(evt);
+                  }
+            });
+            panelBorder.add(btn_tambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 30, 110, 30));
 
-            buttonGradient2.setText("Hapus");
-            panelBorder.add(buttonGradient2, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 30, 110, 30));
+            btn_hapus.setText("Hapus");
+            btn_hapus.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        btn_hapusActionPerformed(evt);
+                  }
+            });
+            panelBorder.add(btn_hapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 30, 110, 30));
 
-            buttonGradient3.setText("Ubah");
-            panelBorder.add(buttonGradient3, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 30, 110, 30));
+            btn_ubah.setText("Ubah");
+            btn_ubah.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        btn_ubahActionPerformed(evt);
+                  }
+            });
+            panelBorder.add(btn_ubah, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 30, 110, 30));
+
+            btn_refresh.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/raven/icon/refresh (1).png"))); // NOI18N
+            btn_refresh.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+            btn_refresh.addMouseListener(new java.awt.event.MouseAdapter() {
+                  public void mouseClicked(java.awt.event.MouseEvent evt) {
+                        btn_refreshMouseClicked(evt);
+                  }
+            });
+            panelBorder.add(btn_refresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 530, 30, 30));
 
             add(panelBorder, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 915, 570));
       }// </editor-fold>//GEN-END:initComponents
 
+      private void btn_tambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_tambahActionPerformed
+            MasterDataGejala data = new MasterDataGejala();
+            Form_H form = new Form_H();
+            data.clearForm(form.txt_kodegejala,form.cbb_organ ,form.txt_gejala);
+            data.autoNumber(form.txt_kodegejala);
+            form.setVisible(true);
+      }//GEN-LAST:event_btn_tambahActionPerformed
+
+      private void btn_ubahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ubahActionPerformed
+            MasterDataGejala data = new MasterDataGejala();
+            Form_H form = new Form_H();
+            data.tampilFormEditGejala(tabel_gejala,form.txt_kodegejala,form.cbb_organ ,form.txt_gejala );
+            form.setVisible(true);
+      }//GEN-LAST:event_btn_ubahActionPerformed
+
+      private void btn_hapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_hapusActionPerformed
+            MasterDataGejala data = new MasterDataGejala();
+            Form_H form = new Form_H();
+            data.hapusGejala(tabel_gejala, form.txt_kodegejala);
+      }//GEN-LAST:event_btn_hapusActionPerformed
+
+      private void btn_refreshMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_refreshMouseClicked
+            MasterDataGejala data = new MasterDataGejala();
+            data.showTable(tabel_gejala);
+      }//GEN-LAST:event_btn_refreshMouseClicked
+
 
       // Variables declaration - do not modify//GEN-BEGIN:variables
-      private swing.ButtonGradient buttonGradient1;
-      private swing.ButtonGradient buttonGradient2;
-      private swing.ButtonGradient buttonGradient3;
+      private swing.ButtonGradient btn_hapus;
+      private javax.swing.JLabel btn_refresh;
+      private swing.ButtonGradient btn_tambah;
+      private swing.ButtonGradient btn_ubah;
       private javax.swing.JLabel jLabel1;
       private com.raven.swing.PanelBorder panelBorder;
       private javax.swing.JScrollPane spTable;

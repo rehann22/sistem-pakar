@@ -40,8 +40,8 @@ public class Form_D extends javax.swing.JPanel {
             jLabel1 = new javax.swing.JLabel();
             spTable = new javax.swing.JScrollPane();
             tabel_rule = new com.raven.swing.Table();
-            buttonGradient1 = new swing.ButtonGradient();
-            buttonGradient2 = new swing.ButtonGradient();
+            btn_hapus = new swing.ButtonGradient();
+            btn_tambah = new swing.ButtonGradient();
             txt_namapenyakit = new textfield.TextField();
             cbb_kodepenyakit = new combobox.Combobox();
 
@@ -78,12 +78,23 @@ public class Form_D extends javax.swing.JPanel {
 
             panelBorder.add(spTable, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 870, 440));
 
-            buttonGradient1.setText("Tambah");
-            panelBorder.add(buttonGradient1, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 70, 110, 30));
+            btn_hapus.setText("Hapus");
+            btn_hapus.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        btn_hapusActionPerformed(evt);
+                  }
+            });
+            panelBorder.add(btn_hapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 70, 110, 30));
 
-            buttonGradient2.setText("Hapus");
-            panelBorder.add(buttonGradient2, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 30, 110, 30));
+            btn_tambah.setText("Tambah");
+            btn_tambah.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        btn_tambahActionPerformed(evt);
+                  }
+            });
+            panelBorder.add(btn_tambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 30, 110, 30));
 
+            txt_namapenyakit.setEditable(false);
             txt_namapenyakit.setBackground(new java.awt.Color(255, 255, 255));
             txt_namapenyakit.setForeground(new java.awt.Color(120, 120, 120));
             txt_namapenyakit.setLabelText("Nama Penyakit");
@@ -110,10 +121,23 @@ public class Form_D extends javax.swing.JPanel {
                   dataRelasi.TampilNamaPenyakit(cbb_kodepenyakit, txt_namapenyakit);
       }//GEN-LAST:event_cbb_kodepenyakitItemStateChanged
 
+      private void btn_tambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_tambahActionPerformed
+            MasterDataRelasi dataRelasi = new MasterDataRelasi();
+            Form_I form = new Form_I();
+            dataRelasi.TambahDataRelasi(cbb_kodepenyakit, form.txt_kode_penyakit, form.txt_namapenyakit, form.tbl_rule);
+            form.setVisible(true);
+      }//GEN-LAST:event_btn_tambahActionPerformed
+
+      private void btn_hapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_hapusActionPerformed
+            MasterDataRelasi dataRelasi = new MasterDataRelasi();
+            Form_I form = new Form_I();
+            dataRelasi.deleteRelasi(cbb_kodepenyakit.getSelectedItem().toString());
+      }//GEN-LAST:event_btn_hapusActionPerformed
+
 
       // Variables declaration - do not modify//GEN-BEGIN:variables
-      private swing.ButtonGradient buttonGradient1;
-      private swing.ButtonGradient buttonGradient2;
+      private swing.ButtonGradient btn_hapus;
+      private swing.ButtonGradient btn_tambah;
       private combobox.Combobox cbb_kodepenyakit;
       private javax.swing.JLabel jLabel1;
       private com.raven.swing.PanelBorder panelBorder;

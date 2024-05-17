@@ -34,7 +34,7 @@ public class Form_F extends javax.swing.JPanel {
             jLabel1 = new javax.swing.JLabel();
             spTable = new javax.swing.JScrollPane();
             tabel_laporan = new com.raven.swing.Table();
-            buttonGradient1 = new swing.ButtonGradient();
+            btn_cetak = new swing.ButtonGradient();
             cbb_filter = new combobox.Combobox();
 
             setBackground(new java.awt.Color(242, 242, 242));
@@ -68,10 +68,15 @@ public class Form_F extends javax.swing.JPanel {
             });
             spTable.setViewportView(tabel_laporan);
 
-            panelBorder.add(spTable, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 870, 480));
+            panelBorder.add(spTable, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 870, 470));
 
-            buttonGradient1.setText("Cetak");
-            panelBorder.add(buttonGradient1, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 30, 110, 30));
+            btn_cetak.setText("Cetak");
+            btn_cetak.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        btn_cetakActionPerformed(evt);
+                  }
+            });
+            panelBorder.add(btn_cetak, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 30, 110, 30));
 
             cbb_filter.setForeground(new java.awt.Color(120, 120, 120));
             cbb_filter.setLabeText("Filter");
@@ -90,13 +95,18 @@ public class Form_F extends javax.swing.JPanel {
             data.pilihIdUser(tabel_laporan, cbb_filter);
       }//GEN-LAST:event_cbb_filterItemStateChanged
 
+      private void btn_cetakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cetakActionPerformed
+            Form_L form = new Form_L();
+            form.setVisible(true);
+      }//GEN-LAST:event_btn_cetakActionPerformed
+
 
       // Variables declaration - do not modify//GEN-BEGIN:variables
-      private swing.ButtonGradient buttonGradient1;
-      private combobox.Combobox cbb_filter;
+      private swing.ButtonGradient btn_cetak;
+      public combobox.Combobox cbb_filter;
       private javax.swing.JLabel jLabel1;
       private com.raven.swing.PanelBorder panelBorder;
       private javax.swing.JScrollPane spTable;
-      private com.raven.swing.Table tabel_laporan;
+      public com.raven.swing.Table tabel_laporan;
       // End of variables declaration//GEN-END:variables
 }

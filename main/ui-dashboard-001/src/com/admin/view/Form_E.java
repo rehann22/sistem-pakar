@@ -34,8 +34,8 @@ public class Form_E extends javax.swing.JPanel {
             jLabel1 = new javax.swing.JLabel();
             spTable = new javax.swing.JScrollPane();
             tabel_pertanyaan = new com.raven.swing.Table();
-            buttonGradient1 = new swing.ButtonGradient();
-            buttonGradient3 = new swing.ButtonGradient();
+            btn_diagnosa = new swing.ButtonGradient();
+            btn_refresh = new swing.ButtonGradient();
 
             setBackground(new java.awt.Color(242, 242, 242));
             setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -66,23 +66,61 @@ public class Form_E extends javax.swing.JPanel {
                         return canEdit [columnIndex];
                   }
             });
+            tabel_pertanyaan.setSelectionBackground(new java.awt.Color(180, 212, 255));
             spTable.setViewportView(tabel_pertanyaan);
 
             panelBorder.add(spTable, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 870, 480));
 
-            buttonGradient1.setText("Diagnosa");
-            panelBorder.add(buttonGradient1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 30, 140, 30));
+            btn_diagnosa.setText("Diagnosa");
+            btn_diagnosa.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        btn_diagnosaActionPerformed(evt);
+                  }
+            });
+            panelBorder.add(btn_diagnosa, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 30, 140, 30));
 
-            buttonGradient3.setText("Refresh Checkbox");
-            panelBorder.add(buttonGradient3, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 30, 140, 30));
+            btn_refresh.setText("Refresh Checkbox");
+            btn_refresh.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        btn_refreshActionPerformed(evt);
+                  }
+            });
+            panelBorder.add(btn_refresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 30, 140, 30));
 
             add(panelBorder, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 915, 570));
       }// </editor-fold>//GEN-END:initComponents
 
+      private void btn_diagnosaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_diagnosaActionPerformed
+            TabelPertanyaan pertanyaan = new TabelPertanyaan();
+            Form_J form = new Form_J();
+            
+                  int selectedCount = 0;
+                  for (int i = 0; i < tabel_pertanyaan.getRowCount(); i++) {
+                      Boolean isSelected = (Boolean)tabel_pertanyaan.getValueAt(i, 3); // Asumsi kolom ke-3 adalah kolom centang
+                      if (isSelected != null && isSelected) {
+                          selectedCount++;
+                         
+                      }
+                  }
+                  String kodeP ;
+                  kodeP = form.txt_kodepenyakit.getText();
+                  pertanyaan.DiagnosaPenyakit(form,selectedCount,tabel_pertanyaan,form.txt_kodepenyakit, form.txt_namapenyakit, form.txt_pencegahan, form.txt_obat);
+                  if (selectedCount >= 2 && !form.txt_kodepenyakit.getText().isEmpty()) {
+                        form.setVisible(true);
+                  }
+            System.out.println("Total Ceklis " + selectedCount);
+            System.out.println(kodeP);
+      }//GEN-LAST:event_btn_diagnosaActionPerformed
+
+      private void btn_refreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_refreshActionPerformed
+            TabelPertanyaan data = new TabelPertanyaan();
+            data.refreshCheckbox(tabel_pertanyaan);
+      }//GEN-LAST:event_btn_refreshActionPerformed
+
 
       // Variables declaration - do not modify//GEN-BEGIN:variables
-      private swing.ButtonGradient buttonGradient1;
-      private swing.ButtonGradient buttonGradient3;
+      private swing.ButtonGradient btn_diagnosa;
+      private swing.ButtonGradient btn_refresh;
       private javax.swing.JLabel jLabel1;
       private com.raven.swing.PanelBorder panelBorder;
       private javax.swing.JScrollPane spTable;

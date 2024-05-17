@@ -1,5 +1,6 @@
 package com.raven.model;
 
+import com.formdev.flatlaf.extras.FlatSVGIcon;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
@@ -44,6 +45,7 @@ public class Model_Menu {
 
     public Icon toIcon() {
         return new ImageIcon(getClass().getResource("/com/raven/icon/" + icon + ".png"));
+
     }
 
     public static enum MenuType {
