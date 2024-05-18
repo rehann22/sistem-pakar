@@ -24,10 +24,10 @@ public class dashboard extends javax.swing.JPanel {
         initComponents();
         
         data.tabelDashboard(tabel_dashboard);
-        card1.setData(new Model_Card(new ImageIcon(getClass().getResource("/com/raven/icon/1.png")), "Penyakit",  data.totalPenyakit()));
-        card2.setData(new Model_Card(new ImageIcon(getClass().getResource("/com/raven/icon/1.png")), "Gejala", data.totalGejala()));
-        card3.setData(new Model_Card(new ImageIcon(getClass().getResource("/com/raven/icon/1.png")), "Rule", data.totalRule()));
-        card4.setData(new Model_Card(new ImageIcon(getClass().getResource("/com/raven/icon/1.png")), "Pengguna", data.totalUser()));
+        card1.setData(new Model_Card(new ImageIcon(getClass().getResource("/com/raven/icon/icons8-virus-64.png")), "Penyakit",  data.totalPenyakit()));
+        card2.setData(new Model_Card(new ImageIcon(getClass().getResource("/com/raven/icon/icons8-virus-64 (1).png")), "Gejala", data.totalGejala()));
+        card3.setData(new Model_Card(new ImageIcon(getClass().getResource("/com/raven/icon/icons8-algorithm-50 (1).png")), "Rule", data.totalRule()));
+        card4.setData(new Model_Card(new ImageIcon(getClass().getResource("/com/raven/icon/icons8-person-64.png")), "Pengguna", data.totalUser()));
         
         //  add row table
         spTable.setVerticalScrollBar(new ScrollBar());
@@ -119,7 +119,7 @@ public class dashboard extends javax.swing.JPanel {
 
             jLabel3.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
             jLabel3.setForeground(new java.awt.Color(127, 127, 127));
-            jLabel3.setText("Standard Table Design");
+            jLabel3.setText("Persentase Konsultasi Perbulan");
             panelBorder1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
             add(panelBorder1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 450, 350));
@@ -129,7 +129,7 @@ public class dashboard extends javax.swing.JPanel {
 
             jLabel2.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
             jLabel2.setForeground(new java.awt.Color(127, 127, 127));
-            jLabel2.setText("Standard Table Design");
+            jLabel2.setText("Data Penyakit Terbanyak");
             panelBorder2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
             spTable.setBorder(null);

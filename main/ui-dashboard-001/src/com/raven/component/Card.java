@@ -49,8 +49,6 @@ public class Card extends javax.swing.JPanel {
             lbKeterangan = new javax.swing.JLabel();
             lbTotal = new javax.swing.JLabel();
 
-            lbIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/raven/icon/stock.png"))); // NOI18N
-
             lbKeterangan.setFont(new java.awt.Font("sansserif", 1, 20)); // NOI18N
             lbKeterangan.setForeground(new java.awt.Color(255, 255, 255));
             lbKeterangan.setText("Keterangan");
@@ -66,21 +64,21 @@ public class Card extends javax.swing.JPanel {
                   .addGroup(layout.createSequentialGroup()
                         .addGap(25, 25, 25)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                              .addComponent(lbIcon)
                               .addComponent(lbTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                              .addComponent(lbKeterangan, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
+                              .addComponent(lbKeterangan, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                              .addComponent(lbIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(217, Short.MAX_VALUE))
             );
             layout.setVerticalGroup(
                   layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                   .addGroup(layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(lbIcon)
-                        .addGap(24, 24, 24)
+                        .addGap(20, 20, 20)
+                        .addComponent(lbIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lbKeterangan, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lbTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(22, Short.MAX_VALUE))
+                        .addContainerGap(18, Short.MAX_VALUE))
             );
       }// </editor-fold>//GEN-END:initComponents
 
