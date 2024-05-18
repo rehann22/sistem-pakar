@@ -15,7 +15,6 @@ public class Form_J extends javax.swing.JFrame {
             jPanel1 = new javax.swing.JPanel();
             txt_obat = new textfield.TextField();
             txt_namapenyakit = new textfield.TextField();
-            buttonGradient2 = new swing.ButtonGradient();
             textAreaScroll1 = new textarea.TextAreaScroll();
             txt_pencegahan = new textarea.TextArea();
             txt_kodepenyakit = new javax.swing.JTextField();
@@ -30,18 +29,13 @@ public class Form_J extends javax.swing.JFrame {
             txt_obat.setBackground(new java.awt.Color(255, 255, 255));
             txt_obat.setForeground(new java.awt.Color(130, 130, 130));
             txt_obat.setLabelText("Kami Merekomendasikan Obat");
-            jPanel1.add(txt_obat, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, 250, -1));
+            jPanel1.add(txt_obat, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, 250, -1));
 
             txt_namapenyakit.setEditable(false);
             txt_namapenyakit.setBackground(new java.awt.Color(255, 255, 255));
             txt_namapenyakit.setForeground(new java.awt.Color(130, 130, 130));
             txt_namapenyakit.setLabelText("Ikan Terjangkit Penyakit");
-            jPanel1.add(txt_namapenyakit, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 250, -1));
-
-            buttonGradient2.setText("Simpan");
-            buttonGradient2.setColor1(new java.awt.Color(93, 7, 130));
-            buttonGradient2.setColor2(new java.awt.Color(7, 65, 115));
-            jPanel1.add(buttonGradient2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 390, 170, 30));
+            jPanel1.add(txt_namapenyakit, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 250, -1));
 
             textAreaScroll1.setLabelText("Pencegahan");
 
@@ -52,13 +46,13 @@ public class Form_J extends javax.swing.JFrame {
             txt_pencegahan.setRows(5);
             textAreaScroll1.setViewportView(txt_pencegahan);
 
-            jPanel1.add(textAreaScroll1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 240, 130));
+            jPanel1.add(textAreaScroll1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 240, 130));
 
             txt_kodepenyakit.setEditable(false);
             txt_kodepenyakit.setBackground(new java.awt.Color(255, 255, 255));
             txt_kodepenyakit.setForeground(new java.awt.Color(255, 255, 255));
             txt_kodepenyakit.setBorder(null);
-            jPanel1.add(txt_kodepenyakit, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 430, 90, 40));
+            jPanel1.add(txt_kodepenyakit, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 420, 90, 40));
 
             getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 500));
 
@@ -77,7 +71,6 @@ public class Form_J extends javax.swing.JFrame {
       }
 
       // Variables declaration - do not modify//GEN-BEGIN:variables
-      private swing.ButtonGradient buttonGradient2;
       private javax.swing.JPanel jPanel1;
       private textarea.TextAreaScroll textAreaScroll1;
       public javax.swing.JTextField txt_kodepenyakit;

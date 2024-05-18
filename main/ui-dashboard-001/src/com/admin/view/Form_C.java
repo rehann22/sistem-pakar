@@ -32,9 +32,8 @@ public class Form_C extends javax.swing.JPanel {
             jLabel1 = new javax.swing.JLabel();
             spTable = new javax.swing.JScrollPane();
             tabel_pengguna = new com.raven.swing.Table();
-            buttonGradient1 = new swing.ButtonGradient();
-            buttonGradient2 = new swing.ButtonGradient();
-            buttonGradient3 = new swing.ButtonGradient();
+            btn_refresh = new swing.ButtonGradient();
+            btn_ubah = new swing.ButtonGradient();
 
             setBackground(new java.awt.Color(242, 242, 242));
             setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -69,26 +68,44 @@ public class Form_C extends javax.swing.JPanel {
 
             panelBorder.add(spTable, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 870, 480));
 
-            buttonGradient1.setText("Tambah");
-            panelBorder.add(buttonGradient1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 30, 110, 30));
+            btn_refresh.setText("Refresh");
+            btn_refresh.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        btn_refreshActionPerformed(evt);
+                  }
+            });
+            panelBorder.add(btn_refresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 30, 110, 30));
 
-            buttonGradient2.setText("Hapus");
-            panelBorder.add(buttonGradient2, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 30, 110, 30));
-
-            buttonGradient3.setText("Ubah");
-            panelBorder.add(buttonGradient3, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 30, 110, 30));
+            btn_ubah.setText("Ubah");
+            btn_ubah.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        btn_ubahActionPerformed(evt);
+                  }
+            });
+            panelBorder.add(btn_ubah, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 30, 110, 30));
 
             add(panelBorder, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 915, 570));
       }// </editor-fold>//GEN-END:initComponents
 
+      private void btn_ubahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ubahActionPerformed
+            MasterDataUsers data = new MasterDataUsers();
+            Form_K form = new Form_K();
+            data.FormDataPengguna(tabel_pengguna, form.txt_id, form.txt_nama, form.txt_username, form.txt_password);
+            form.setVisible(true);
+      }//GEN-LAST:event_btn_ubahActionPerformed
+
+      private void btn_refreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_refreshActionPerformed
+            MasterDataUsers data = new MasterDataUsers();
+            data.tampilDataUsers(tabel_pengguna);
+      }//GEN-LAST:event_btn_refreshActionPerformed
+
 
       // Variables declaration - do not modify//GEN-BEGIN:variables
-      private swing.ButtonGradient buttonGradient1;
-      private swing.ButtonGradient buttonGradient2;
-      private swing.ButtonGradient buttonGradient3;
+      private swing.ButtonGradient btn_refresh;
+      private swing.ButtonGradient btn_ubah;
       private javax.swing.JLabel jLabel1;
       private com.raven.swing.PanelBorder panelBorder;
       private javax.swing.JScrollPane spTable;
-      private com.raven.swing.Table tabel_pengguna;
+      public com.raven.swing.Table tabel_pengguna;
       // End of variables declaration//GEN-END:variables
 }
