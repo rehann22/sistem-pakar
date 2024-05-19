@@ -111,7 +111,7 @@
               <Font name="sansserif" size="18" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="7f" green="7f" red="7f" type="rgb"/>
+              <Color blue="7a" green="67" red="61" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Persentase Konsultasi Perbulan"/>
           </Properties>
@@ -145,7 +145,7 @@
               <Font name="sansserif" size="18" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="7f" green="7f" red="7f" type="rgb"/>
+              <Color blue="7a" green="67" red="61" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Data Penyakit Terbanyak"/>
           </Properties>

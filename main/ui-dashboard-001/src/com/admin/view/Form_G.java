@@ -36,21 +36,21 @@ public class Form_G extends javax.swing.JFrame {
 
             txt_deskripsi.setBackground(new java.awt.Color(255, 255, 255));
             txt_deskripsi.setColumns(20);
-            txt_deskripsi.setForeground(new java.awt.Color(130, 130, 130));
+            txt_deskripsi.setForeground(new java.awt.Color(97, 103, 122));
             txt_deskripsi.setRows(5);
             textAreaScroll1.setViewportView(txt_deskripsi);
 
-            jPanel1.add(textAreaScroll1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, 250, 80));
+            jPanel1.add(textAreaScroll1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 290, 80));
 
             txt_namapenyakit.setBackground(new java.awt.Color(255, 255, 255));
-            txt_namapenyakit.setForeground(new java.awt.Color(130, 130, 130));
+            txt_namapenyakit.setForeground(new java.awt.Color(97, 103, 122));
             txt_namapenyakit.setLabelText("Nama Penyakit");
-            jPanel1.add(txt_namapenyakit, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 250, -1));
+            jPanel1.add(txt_namapenyakit, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, 290, -1));
 
             txt_obat.setBackground(new java.awt.Color(255, 255, 255));
-            txt_obat.setForeground(new java.awt.Color(130, 130, 130));
+            txt_obat.setForeground(new java.awt.Color(97, 103, 122));
             txt_obat.setLabelText("Obat");
-            jPanel1.add(txt_obat, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 370, 250, -1));
+            jPanel1.add(txt_obat, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, 290, -1));
 
             textarea.setBackground(new java.awt.Color(255, 255, 255));
             textarea.setForeground(new java.awt.Color(130, 130, 130));
@@ -58,31 +58,31 @@ public class Form_G extends javax.swing.JFrame {
 
             txt_pencegahan.setBackground(new java.awt.Color(255, 255, 255));
             txt_pencegahan.setColumns(20);
-            txt_pencegahan.setForeground(new java.awt.Color(130, 130, 130));
+            txt_pencegahan.setForeground(new java.awt.Color(97, 103, 122));
             txt_pencegahan.setRows(5);
             textarea.setViewportView(txt_pencegahan);
 
-            jPanel1.add(textarea, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, 250, 80));
+            jPanel1.add(textarea, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 290, 80));
 
             textAreaScroll3.setLabelText("Gejala");
 
             txt_gejala.setBackground(new java.awt.Color(255, 255, 255));
             txt_gejala.setColumns(20);
-            txt_gejala.setForeground(new java.awt.Color(130, 130, 130));
+            txt_gejala.setForeground(new java.awt.Color(97, 103, 122));
             txt_gejala.setRows(5);
             textAreaScroll3.setViewportView(txt_gejala);
 
-            jPanel1.add(textAreaScroll3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 250, 80));
+            jPanel1.add(textAreaScroll3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 290, 80));
 
             txt_kodepenyakit.setEditable(false);
             txt_kodepenyakit.setBackground(new java.awt.Color(255, 255, 255));
-            txt_kodepenyakit.setForeground(new java.awt.Color(130, 130, 130));
+            txt_kodepenyakit.setForeground(new java.awt.Color(97, 103, 122));
             txt_kodepenyakit.setLabelText("Kode Penyakit");
-            jPanel1.add(txt_kodepenyakit, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, 250, -1));
+            jPanel1.add(txt_kodepenyakit, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 290, -1));
 
             btn_ubah.setText("Ubah");
-            btn_ubah.setColor1(new java.awt.Color(195, 36, 35));
-            btn_ubah.setColor2(new java.awt.Color(7, 65, 115));
+            btn_ubah.setColor1(new java.awt.Color(35, 20, 226));
+            btn_ubah.setColor2(new java.awt.Color(209, 18, 235));
             btn_ubah.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
                         btn_ubahActionPerformed(evt);
@@ -91,8 +91,8 @@ public class Form_G extends javax.swing.JFrame {
             jPanel1.add(btn_ubah, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 440, 117, 30));
 
             btn_simpan.setText("Simpan");
-            btn_simpan.setColor1(new java.awt.Color(93, 7, 130));
-            btn_simpan.setColor2(new java.awt.Color(7, 65, 115));
+            btn_simpan.setColor1(new java.awt.Color(35, 20, 226));
+            btn_simpan.setColor2(new java.awt.Color(209, 18, 235));
             btn_simpan.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
                         btn_simpanActionPerformed(evt);

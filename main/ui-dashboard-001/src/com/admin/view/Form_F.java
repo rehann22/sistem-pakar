@@ -44,7 +44,7 @@ public class Form_F extends javax.swing.JPanel {
             panelBorder.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
             jLabel1.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
-            jLabel1.setForeground(new java.awt.Color(127, 127, 127));
+            jLabel1.setForeground(new java.awt.Color(97, 103, 122));
             jLabel1.setText("Data Konsultasi User");
             panelBorder.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
 
@@ -71,6 +71,8 @@ public class Form_F extends javax.swing.JPanel {
             panelBorder.add(spTable, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 870, 470));
 
             btn_cetak.setText("Cetak");
+            btn_cetak.setColor1(new java.awt.Color(35, 20, 226));
+            btn_cetak.setColor2(new java.awt.Color(209, 18, 235));
             btn_cetak.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
                         btn_cetakActionPerformed(evt);
@@ -78,7 +80,7 @@ public class Form_F extends javax.swing.JPanel {
             });
             panelBorder.add(btn_cetak, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 30, 110, 30));
 
-            cbb_filter.setForeground(new java.awt.Color(120, 120, 120));
+            cbb_filter.setForeground(new java.awt.Color(97, 103, 122));
             cbb_filter.setLabeText("Filter");
             cbb_filter.addItemListener(new java.awt.event.ItemListener() {
                   public void itemStateChanged(java.awt.event.ItemEvent evt) {

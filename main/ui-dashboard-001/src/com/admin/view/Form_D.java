@@ -52,9 +52,9 @@ public class Form_D extends javax.swing.JPanel {
             panelBorder.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
             jLabel1.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
-            jLabel1.setForeground(new java.awt.Color(127, 127, 127));
+            jLabel1.setForeground(new java.awt.Color(97, 103, 122));
             jLabel1.setText("Rule / Aturan");
-            panelBorder.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
+            panelBorder.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, -1, -1));
 
             spTable.setBorder(null);
 
@@ -79,6 +79,8 @@ public class Form_D extends javax.swing.JPanel {
             panelBorder.add(spTable, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 870, 440));
 
             btn_hapus.setText("Hapus");
+            btn_hapus.setColor1(new java.awt.Color(35, 20, 226));
+            btn_hapus.setColor2(new java.awt.Color(209, 18, 235));
             btn_hapus.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
                         btn_hapusActionPerformed(evt);
@@ -87,6 +89,8 @@ public class Form_D extends javax.swing.JPanel {
             panelBorder.add(btn_hapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 70, 110, 30));
 
             btn_tambah.setText("Tambah");
+            btn_tambah.setColor1(new java.awt.Color(35, 20, 226));
+            btn_tambah.setColor2(new java.awt.Color(209, 18, 235));
             btn_tambah.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
                         btn_tambahActionPerformed(evt);
@@ -96,11 +100,11 @@ public class Form_D extends javax.swing.JPanel {
 
             txt_namapenyakit.setEditable(false);
             txt_namapenyakit.setBackground(new java.awt.Color(255, 255, 255));
-            txt_namapenyakit.setForeground(new java.awt.Color(120, 120, 120));
+            txt_namapenyakit.setForeground(new java.awt.Color(97, 103, 122));
             txt_namapenyakit.setLabelText("Nama Penyakit");
             panelBorder.add(txt_namapenyakit, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 40, 150, 50));
 
-            cbb_kodepenyakit.setForeground(new java.awt.Color(120, 120, 120));
+            cbb_kodepenyakit.setForeground(new java.awt.Color(97, 103, 122));
             cbb_kodepenyakit.setLabeText("Kode penyakit");
             cbb_kodepenyakit.setLightWeightPopupEnabled(false);
             cbb_kodepenyakit.addItemListener(new java.awt.event.ItemListener() {

@@ -27,41 +27,41 @@ public class Form_H extends javax.swing.JFrame {
             jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
             txt_gejala.setBackground(new java.awt.Color(255, 255, 255));
-            txt_gejala.setForeground(new java.awt.Color(130, 130, 130));
+            txt_gejala.setForeground(new java.awt.Color(97, 103, 122));
             txt_gejala.setLabelText("Gejala");
-            jPanel1.add(txt_gejala, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 250, -1));
+            jPanel1.add(txt_gejala, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, 250, -1));
 
             txt_kodegejala.setEditable(false);
             txt_kodegejala.setBackground(new java.awt.Color(255, 255, 255));
-            txt_kodegejala.setForeground(new java.awt.Color(130, 130, 130));
+            txt_kodegejala.setForeground(new java.awt.Color(97, 103, 122));
             txt_kodegejala.setLabelText("Kode Gejala");
             jPanel1.add(txt_kodegejala, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, 250, -1));
 
             btn_ubah.setText("Ubah");
-            btn_ubah.setColor1(new java.awt.Color(195, 36, 35));
-            btn_ubah.setColor2(new java.awt.Color(7, 65, 115));
+            btn_ubah.setColor1(new java.awt.Color(35, 20, 226));
+            btn_ubah.setColor2(new java.awt.Color(209, 18, 235));
             btn_ubah.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
                         btn_ubahActionPerformed(evt);
                   }
             });
-            jPanel1.add(btn_ubah, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 370, 117, 30));
+            jPanel1.add(btn_ubah, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 350, 120, 30));
 
             btn_simpan.setText("Simpan");
-            btn_simpan.setColor1(new java.awt.Color(93, 7, 130));
-            btn_simpan.setColor2(new java.awt.Color(7, 65, 115));
+            btn_simpan.setColor1(new java.awt.Color(35, 20, 226));
+            btn_simpan.setColor2(new java.awt.Color(209, 18, 235));
             btn_simpan.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
                         btn_simpanActionPerformed(evt);
                   }
             });
-            jPanel1.add(btn_simpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 370, 117, 30));
+            jPanel1.add(btn_simpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, 120, 30));
 
-            cbb_organ.setForeground(new java.awt.Color(120, 120, 120));
+            cbb_organ.setForeground(new java.awt.Color(97, 103, 122));
             cbb_organ.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Insang", "Kepala", "Kulit", "Organ Dalam", "Punggung ", "Sirip", "Sisik", "Tubuh" }));
             cbb_organ.setSelectedIndex(-1);
             cbb_organ.setLabeText("Organ");
-            jPanel1.add(cbb_organ, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 240, -1));
+            jPanel1.add(cbb_organ, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 240, -1));
 
             getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 500));
 

@@ -38,13 +38,13 @@ public class Form_I extends javax.swing.JFrame {
 
             txt_namapenyakit.setEditable(false);
             txt_namapenyakit.setBackground(new java.awt.Color(255, 255, 255));
-            txt_namapenyakit.setForeground(new java.awt.Color(130, 130, 130));
+            txt_namapenyakit.setForeground(new java.awt.Color(97, 103, 122));
             txt_namapenyakit.setLabelText("Nama Penyakit");
             jPanel1.add(txt_namapenyakit, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 170, -1));
 
             btn_simpan.setText("Simpan");
-            btn_simpan.setColor1(new java.awt.Color(93, 7, 130));
-            btn_simpan.setColor2(new java.awt.Color(7, 65, 115));
+            btn_simpan.setColor1(new java.awt.Color(35, 20, 226));
+            btn_simpan.setColor2(new java.awt.Color(209, 18, 235));
             btn_simpan.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
                         btn_simpanActionPerformed(evt);
@@ -54,7 +54,7 @@ public class Form_I extends javax.swing.JFrame {
 
             txt_kode_penyakit.setEditable(false);
             txt_kode_penyakit.setBackground(new java.awt.Color(255, 255, 255));
-            txt_kode_penyakit.setForeground(new java.awt.Color(130, 130, 130));
+            txt_kode_penyakit.setForeground(new java.awt.Color(97, 103, 122));
             txt_kode_penyakit.setLabelText("Kode Penyakit");
             jPanel1.add(txt_kode_penyakit, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 80, -1));
 

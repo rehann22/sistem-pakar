@@ -112,7 +112,7 @@ public class TabelPertanyaan {
       }  
       
       
-      public void DiagnosaPenyakit(JFrame frame,int selectedCount, JTable tabelPertanyaan, JTextField kPenyakit, JTextField namaPenyakit, JTextArea pencegahan, JTextField obat) {
+      public void DiagnosaPenyakit(JFrame frame,int selectedCount, JTable tabelPertanyaan, JTextField kPenyakit, JTextField namaPenyakit, JTextArea pencegahan, JTextField obat, JTextField kodeKonsultasi) {
             selectedCount = 0;
             try {
                   Connection conn = new ConnectionDb().connect();

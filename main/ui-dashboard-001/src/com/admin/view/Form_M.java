@@ -19,6 +19,7 @@ public class Form_M extends javax.swing.JFrame {
             btn_simpan = new swing.ButtonGradient();
             txt_id = new textfield.TextField();
             txt_nama = new textfield.TextField();
+            jLabel1 = new javax.swing.JLabel();
 
             setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
             getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -27,35 +28,41 @@ public class Form_M extends javax.swing.JFrame {
             jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
             txt_password.setBackground(new java.awt.Color(255, 255, 255));
-            txt_password.setForeground(new java.awt.Color(130, 130, 130));
+            txt_password.setForeground(new java.awt.Color(97, 103, 122));
             txt_password.setLabelText("Password");
-            jPanel1.add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, 250, -1));
+            jPanel1.add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, 250, -1));
 
             txt_email.setBackground(new java.awt.Color(255, 255, 255));
-            txt_email.setForeground(new java.awt.Color(130, 130, 130));
+            txt_email.setForeground(new java.awt.Color(97, 103, 122));
             txt_email.setLabelText("Email");
-            jPanel1.add(txt_email, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 250, -1));
+            jPanel1.add(txt_email, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, 250, -1));
 
             btn_simpan.setText("Simpan");
-            btn_simpan.setColor1(new java.awt.Color(195, 36, 35));
-            btn_simpan.setColor2(new java.awt.Color(7, 65, 115));
+            btn_simpan.setColor1(new java.awt.Color(35, 20, 226));
+            btn_simpan.setColor2(new java.awt.Color(209, 18, 235));
             btn_simpan.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
                         btn_simpanActionPerformed(evt);
                   }
             });
-            jPanel1.add(btn_simpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(77, 370, 240, 30));
+            jPanel1.add(btn_simpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 390, 250, 30));
 
             txt_id.setEditable(false);
             txt_id.setBackground(new java.awt.Color(255, 255, 255));
-            txt_id.setForeground(new java.awt.Color(130, 130, 130));
+            txt_id.setForeground(new java.awt.Color(97, 103, 122));
             txt_id.setLabelText("Id");
-            jPanel1.add(txt_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 250, -1));
+            jPanel1.add(txt_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, 250, -1));
 
             txt_nama.setBackground(new java.awt.Color(255, 255, 255));
-            txt_nama.setForeground(new java.awt.Color(130, 130, 130));
+            txt_nama.setForeground(new java.awt.Color(97, 103, 122));
             txt_nama.setLabelText("Nama");
-            jPanel1.add(txt_nama, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 250, -1));
+            jPanel1.add(txt_nama, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, 250, -1));
+
+            jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+            jLabel1.setForeground(new java.awt.Color(97, 103, 122));
+            jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+            jLabel1.setText("Data Admin Pakar");
+            jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 390, 40));
 
             getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 500));
 
@@ -80,6 +87,7 @@ public class Form_M extends javax.swing.JFrame {
 
       // Variables declaration - do not modify//GEN-BEGIN:variables
       private swing.ButtonGradient btn_simpan;
+      private javax.swing.JLabel jLabel1;
       private javax.swing.JPanel jPanel1;
       public textfield.TextField txt_email;
       public textfield.TextField txt_id;

@@ -9,8 +9,7 @@ public class MainLogin extends javax.swing.JFrame {
 
       public MainLogin() {
             initComponents();
-            icon.setIcon(new FlatSVGIcon("com/raven/icon/fishing with net-rafiki.svg", icon.getWidth(), icon.getHeight()));
-            
+            icon.setIcon(new FlatSVGIcon("com/raven/icon/Artificial Intelligence (1).svg", icon.getWidth(), icon.getHeight()));
       }
       
       private void btnLoginOnClick () {
@@ -52,8 +51,8 @@ public class MainLogin extends javax.swing.JFrame {
             jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
             btn_login.setText("Login");
-            btn_login.setColor1(new java.awt.Color(93, 7, 130));
-            btn_login.setColor2(new java.awt.Color(7, 65, 115));
+            btn_login.setColor1(new java.awt.Color(35, 20, 226));
+            btn_login.setColor2(new java.awt.Color(209, 18, 235));
             btn_login.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
                         btn_loginActionPerformed(evt);
@@ -62,12 +61,12 @@ public class MainLogin extends javax.swing.JFrame {
             jPanel1.add(btn_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 280, 240, 30));
 
             txt_id.setBackground(new java.awt.Color(255, 255, 255));
-            txt_id.setForeground(new java.awt.Color(130, 130, 130));
+            txt_id.setForeground(new java.awt.Color(97, 103, 122));
             txt_id.setLabelText("Id Admin");
             jPanel1.add(txt_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 120, 240, -1));
 
             txt_password.setBackground(new java.awt.Color(255, 255, 255));
-            txt_password.setForeground(new java.awt.Color(130, 130, 130));
+            txt_password.setForeground(new java.awt.Color(97, 103, 122));
             txt_password.setLabelText("Password");
             txt_password.setShowAndHide(true);
             jPanel1.add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, 240, -1));
@@ -75,7 +74,7 @@ public class MainLogin extends javax.swing.JFrame {
 
             jLabel2.setBackground(new java.awt.Color(255, 255, 255));
             jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-            jLabel2.setForeground(new java.awt.Color(150, 150, 150));
+            jLabel2.setForeground(new java.awt.Color(97, 103, 122));
             jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
             jLabel2.setText("Login Admin");
             jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 70, 240, 30));

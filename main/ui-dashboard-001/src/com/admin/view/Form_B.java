@@ -46,7 +46,7 @@ public class Form_B extends javax.swing.JPanel {
             panelBorder.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
             jLabel1.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
-            jLabel1.setForeground(new java.awt.Color(127, 127, 127));
+            jLabel1.setForeground(new java.awt.Color(97, 103, 122));
             jLabel1.setText("Data Gejala");
             panelBorder.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
 
@@ -73,6 +73,8 @@ public class Form_B extends javax.swing.JPanel {
             panelBorder.add(spTable, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 870, 460));
 
             btn_tambah.setText("Tambah");
+            btn_tambah.setColor1(new java.awt.Color(35, 20, 226));
+            btn_tambah.setColor2(new java.awt.Color(209, 18, 235));
             btn_tambah.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
                         btn_tambahActionPerformed(evt);
@@ -81,6 +83,8 @@ public class Form_B extends javax.swing.JPanel {
             panelBorder.add(btn_tambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 30, 110, 30));
 
             btn_hapus.setText("Hapus");
+            btn_hapus.setColor1(new java.awt.Color(35, 20, 226));
+            btn_hapus.setColor2(new java.awt.Color(209, 18, 235));
             btn_hapus.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
                         btn_hapusActionPerformed(evt);
@@ -89,6 +93,8 @@ public class Form_B extends javax.swing.JPanel {
             panelBorder.add(btn_hapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 30, 110, 30));
 
             btn_ubah.setText("Ubah");
+            btn_ubah.setColor1(new java.awt.Color(35, 20, 226));
+            btn_ubah.setColor2(new java.awt.Color(209, 18, 235));
             btn_ubah.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
                         btn_ubahActionPerformed(evt);

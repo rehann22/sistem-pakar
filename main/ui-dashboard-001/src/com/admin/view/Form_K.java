@@ -19,6 +19,7 @@ public class Form_K extends javax.swing.JFrame {
             buttonGradient2 = new swing.ButtonGradient();
             txt_id = new textfield.TextField();
             txt_nama = new textfield.TextField();
+            jLabel1 = new javax.swing.JLabel();
 
             setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
             getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -27,35 +28,41 @@ public class Form_K extends javax.swing.JFrame {
             jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
             txt_password.setBackground(new java.awt.Color(255, 255, 255));
-            txt_password.setForeground(new java.awt.Color(130, 130, 130));
+            txt_password.setForeground(new java.awt.Color(97, 103, 122));
             txt_password.setLabelText("Password");
-            jPanel1.add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, 250, -1));
+            jPanel1.add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, 250, -1));
 
             txt_username.setBackground(new java.awt.Color(255, 255, 255));
-            txt_username.setForeground(new java.awt.Color(130, 130, 130));
+            txt_username.setForeground(new java.awt.Color(97, 103, 122));
             txt_username.setLabelText("Username");
-            jPanel1.add(txt_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 250, -1));
+            jPanel1.add(txt_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, 250, -1));
 
             buttonGradient2.setText("Simpan");
-            buttonGradient2.setColor1(new java.awt.Color(93, 7, 130));
-            buttonGradient2.setColor2(new java.awt.Color(7, 65, 115));
+            buttonGradient2.setColor1(new java.awt.Color(35, 20, 226));
+            buttonGradient2.setColor2(new java.awt.Color(209, 18, 235));
             buttonGradient2.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
                         buttonGradient2ActionPerformed(evt);
                   }
             });
-            jPanel1.add(buttonGradient2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 370, 240, 30));
+            jPanel1.add(buttonGradient2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 390, 250, 30));
 
             txt_id.setEditable(false);
             txt_id.setBackground(new java.awt.Color(255, 255, 255));
-            txt_id.setForeground(new java.awt.Color(130, 130, 130));
+            txt_id.setForeground(new java.awt.Color(97, 103, 122));
             txt_id.setLabelText("Id");
-            jPanel1.add(txt_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 250, -1));
+            jPanel1.add(txt_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, 250, -1));
 
             txt_nama.setBackground(new java.awt.Color(255, 255, 255));
-            txt_nama.setForeground(new java.awt.Color(130, 130, 130));
+            txt_nama.setForeground(new java.awt.Color(97, 103, 122));
             txt_nama.setLabelText("Nama");
-            jPanel1.add(txt_nama, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 250, -1));
+            jPanel1.add(txt_nama, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, 250, -1));
+
+            jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+            jLabel1.setForeground(new java.awt.Color(97, 103, 122));
+            jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+            jLabel1.setText("Ubah Data Pengguna");
+            jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 390, 40));
 
             getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 500));
 
@@ -81,6 +88,7 @@ public class Form_K extends javax.swing.JFrame {
 
       // Variables declaration - do not modify//GEN-BEGIN:variables
       private swing.ButtonGradient buttonGradient2;
+      private javax.swing.JLabel jLabel1;
       private javax.swing.JPanel jPanel1;
       public textfield.TextField txt_id;
       public textfield.TextField txt_nama;

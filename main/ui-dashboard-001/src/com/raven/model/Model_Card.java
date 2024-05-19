@@ -41,3 +41,4 @@ public class Model_Card {
     private String title;
     private int values;
 }
+

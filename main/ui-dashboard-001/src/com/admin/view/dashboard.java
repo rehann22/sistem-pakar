@@ -2,7 +2,6 @@ package com.admin.view;
 
 import com.admin.controler.Dashboard;
 import com.raven.model.Model_Card;
-import com.raven.model.StatusType;
 import com.raven.swing.ScrollBar;
 import java.awt.Color;
 import java.sql.Connection;
@@ -118,7 +117,7 @@ public class dashboard extends javax.swing.JPanel {
             panelBorder1.add(pie_chart, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 430, 310));
 
             jLabel3.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
-            jLabel3.setForeground(new java.awt.Color(127, 127, 127));
+            jLabel3.setForeground(new java.awt.Color(97, 103, 122));
             jLabel3.setText("Persentase Konsultasi Perbulan");
             panelBorder1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
@@ -128,7 +127,7 @@ public class dashboard extends javax.swing.JPanel {
             panelBorder2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
             jLabel2.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
-            jLabel2.setForeground(new java.awt.Color(127, 127, 127));
+            jLabel2.setForeground(new java.awt.Color(97, 103, 122));
             jLabel2.setText("Data Penyakit Terbanyak");
             panelBorder2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 

@@ -1,14 +1,9 @@
 package com.admin.view;
 
 import com.admin.controler.AdminLogin;
-import com.formdev.flatlaf.FlatLightLaf;
 import com.formdev.flatlaf.extras.FlatSVGIcon;
 import com.raven.main.Main;
-import com.raven.swing.ScrollBar;
-import java.awt.Color;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
 
 public class Login extends javax.swing.JFrame {
 
@@ -67,12 +62,12 @@ public class Login extends javax.swing.JFrame {
             jPanel1.add(btn_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 280, 240, 30));
 
             txt_id.setBackground(new java.awt.Color(255, 255, 255));
-            txt_id.setForeground(new java.awt.Color(130, 130, 130));
+            txt_id.setForeground(new java.awt.Color(97, 103, 122));
             txt_id.setLabelText("Id Admin");
             jPanel1.add(txt_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 120, 240, -1));
 
             txt_password.setBackground(new java.awt.Color(255, 255, 255));
-            txt_password.setForeground(new java.awt.Color(130, 130, 130));
+            txt_password.setForeground(new java.awt.Color(97, 103, 122));
             txt_password.setLabelText("Password");
             txt_password.setShowAndHide(true);
             jPanel1.add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, 240, -1));
@@ -80,7 +75,7 @@ public class Login extends javax.swing.JFrame {
 
             jLabel2.setBackground(new java.awt.Color(255, 255, 255));
             jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-            jLabel2.setForeground(new java.awt.Color(150, 150, 150));
+            jLabel2.setForeground(new java.awt.Color(97, 103, 122));
             jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
             jLabel2.setText("Login Admin");
             jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 70, 240, 30));

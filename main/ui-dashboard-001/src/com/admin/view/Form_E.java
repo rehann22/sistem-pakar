@@ -1,5 +1,6 @@
 package com.admin.view;
 
+import com.admin.controler.HasilKonsulltasi;
 import com.admin.controler.MasterDataPenyakit;
 import com.admin.controler.MasterDataUsers;
 import com.admin.controler.TabelPertanyaan;
@@ -44,7 +45,7 @@ public class Form_E extends javax.swing.JPanel {
             panelBorder.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
             jLabel1.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
-            jLabel1.setForeground(new java.awt.Color(127, 127, 127));
+            jLabel1.setForeground(new java.awt.Color(97, 103, 122));
             jLabel1.setText("List Pertanyaan");
             panelBorder.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
 
@@ -72,6 +73,8 @@ public class Form_E extends javax.swing.JPanel {
             panelBorder.add(spTable, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 870, 480));
 
             btn_diagnosa.setText("Diagnosa");
+            btn_diagnosa.setColor1(new java.awt.Color(35, 20, 226));
+            btn_diagnosa.setColor2(new java.awt.Color(209, 18, 235));
             btn_diagnosa.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
                         btn_diagnosaActionPerformed(evt);
@@ -80,6 +83,8 @@ public class Form_E extends javax.swing.JPanel {
             panelBorder.add(btn_diagnosa, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 30, 140, 30));
 
             btn_refresh.setText("Refresh Checkbox");
+            btn_refresh.setColor1(new java.awt.Color(35, 20, 226));
+            btn_refresh.setColor2(new java.awt.Color(209, 18, 235));
             btn_refresh.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
                         btn_refreshActionPerformed(evt);
@@ -93,7 +98,8 @@ public class Form_E extends javax.swing.JPanel {
       private void btn_diagnosaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_diagnosaActionPerformed
             TabelPertanyaan pertanyaan = new TabelPertanyaan();
             Form_J form = new Form_J();
-            
+            HasilKonsulltasi data = new HasilKonsulltasi();
+            form.txt_kode.setText(data.autoNumber());
                   int selectedCount = 0;
                   for (int i = 0; i < tabel_pertanyaan.getRowCount(); i++) {
                       Boolean isSelected = (Boolean)tabel_pertanyaan.getValueAt(i, 3); // Asumsi kolom ke-3 adalah kolom centang
@@ -104,7 +110,7 @@ public class Form_E extends javax.swing.JPanel {
                   }
                   String kodeP ;
                   kodeP = form.txt_kodepenyakit.getText();
-                  pertanyaan.DiagnosaPenyakit(form,selectedCount,tabel_pertanyaan,form.txt_kodepenyakit, form.txt_namapenyakit, form.txt_pencegahan, form.txt_obat);
+                  pertanyaan.DiagnosaPenyakit(form,selectedCount,tabel_pertanyaan,form.txt_kodepenyakit, form.txt_namapenyakit, form.txt_pencegahan, form.txt_obat, form.txt_kode);
                   if (selectedCount >= 2 && !form.txt_kodepenyakit.getText().isEmpty()) {
                         form.setVisible(true);
                   }

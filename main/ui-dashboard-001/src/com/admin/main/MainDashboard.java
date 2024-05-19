@@ -40,7 +40,7 @@ public class MainDashboard extends javax.swing.JFrame {
             @Override
             public void selected(int index) {
                   
-            if (index == 0) {
+                  if (index == 0) {
                   setForm(admin_dashboard);
                   } else if (index == 1) {
                          setForm(form_a);
@@ -59,11 +59,11 @@ public class MainDashboard extends javax.swing.JFrame {
                         AdminProfile data = new AdminProfile();
                         data.TampilData(form.txt_id, form.txt_nama, form.txt_email, form.txt_password);
                         form.setVisible(true);
-                  } else if (index == 11) {
+                  } else if (index == 11) { //logout
                         int jawaban = JOptionPane.showConfirmDialog(null, "Anda yakin ingin keluar?", "Konfirmasi", JOptionPane.YES_NO_OPTION);
                         if (jawaban == JOptionPane.YES_OPTION) {
                              System.exit(0);
-                         }
+                        }
                   }
             
             }
