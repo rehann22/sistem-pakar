@@ -20,8 +20,7 @@ public class dashboard extends javax.swing.JPanel {
     public dashboard() {
      
         Dashboard data = new Dashboard();         
-        initComponents();
-        
+        initComponents();        
         data.tabelDashboard(tabel_dashboard);
         card1.setData(new Model_Card(new ImageIcon(getClass().getResource("/com/raven/icon/icons8-virus-64.png")), "Penyakit",  data.totalPenyakit()));
         card2.setData(new Model_Card(new ImageIcon(getClass().getResource("/com/raven/icon/icons8-virus-64 (1).png")), "Gejala", data.totalGejala()));
@@ -37,9 +36,9 @@ public class dashboard extends javax.swing.JPanel {
         spTable.setCorner(JScrollPane.UPPER_RIGHT_CORNER, p);
         
         pieChart();
-    }
+       }
     
-         public void pieChart () {
+      public void pieChart () {
             pie_chart.setChartType(PieChart.PeiChartType.DONUT_CHART);
             // Ambil data dari database
             try {
@@ -69,6 +68,15 @@ public class dashboard extends javax.swing.JPanel {
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
+      }
+         
+      public void refreshDashboard () {
+           Dashboard data = new Dashboard(); 
+           data.tabelDashboard(tabel_dashboard);
+           card1.setData(new Model_Card(new ImageIcon(getClass().getResource("/com/raven/icon/icons8-virus-64.png")), "Penyakit",  data.totalPenyakit()));
+           card2.setData(new Model_Card(new ImageIcon(getClass().getResource("/com/raven/icon/icons8-virus-64 (1).png")), "Gejala", data.totalGejala()));
+           card3.setData(new Model_Card(new ImageIcon(getClass().getResource("/com/raven/icon/icons8-algorithm-50 (1).png")), "Rule", data.totalRule()));
+           card4.setData(new Model_Card(new ImageIcon(getClass().getResource("/com/raven/icon/icons8-person-64.png")), "Pengguna", data.totalUser()));
       }
 
 
@@ -167,8 +175,8 @@ public class dashboard extends javax.swing.JPanel {
       private javax.swing.JLayeredPane panel;
       private com.raven.swing.PanelBorder panelBorder1;
       private com.raven.swing.PanelBorder panelBorder2;
-      private javaswingdev.chart.PieChart pie_chart;
+      public javaswingdev.chart.PieChart pie_chart;
       private javax.swing.JScrollPane spTable;
-      private com.raven.swing.Table tabel_dashboard;
+      public com.raven.swing.Table tabel_dashboard;
       // End of variables declaration//GEN-END:variables
 }

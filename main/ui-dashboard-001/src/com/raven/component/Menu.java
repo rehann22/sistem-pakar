@@ -40,15 +40,15 @@ public class Menu extends javax.swing.JPanel {
         listMenu1.addItem(new Model_Menu("virus", "Data Penyakit", Model_Menu.MenuType.MENU));
         listMenu1.addItem(new Model_Menu("dna", "Data Gejala", Model_Menu.MenuType.MENU));
         listMenu1.addItem(new Model_Menu("2", "Data Pengguna", Model_Menu.MenuType.MENU));
-        listMenu1.addItem(new Model_Menu("4", "Rule /Aturan", Model_Menu.MenuType.MENU));
+        listMenu1.addItem(new Model_Menu("6", "Rule /Aturan", Model_Menu.MenuType.MENU));
         listMenu1.addItem(new Model_Menu("stethoscope", "Diagnosa ", Model_Menu.MenuType.MENU));
         listMenu1.addItem(new Model_Menu("laporan", "Laporan", Model_Menu.MenuType.MENU));
-        listMenu1.addItem(new Model_Menu("", " ", Model_Menu.MenuType.EMPTY));
-        listMenu1.addItem(new Model_Menu("", " ", Model_Menu.MenuType.EMPTY));
-        listMenu1.addItem(new Model_Menu("", " ", Model_Menu.MenuType.EMPTY));
+        listMenu1.addItem(new Model_Menu("4", " ", Model_Menu.MenuType.EMPTY));
+        listMenu1.addItem(new Model_Menu("4", "Refresh", Model_Menu.MenuType.MENU)); 
         listMenu1.addItem(new Model_Menu("8", "Profile", Model_Menu.MenuType.MENU));
-        listMenu1.addItem(new Model_Menu("logout", "Keluar ", Model_Menu.MenuType.MENU)); 
-
+        listMenu1.addItem(new Model_Menu("", " ", Model_Menu.MenuType.EMPTY));
+        listMenu1.addItem(new Model_Menu("", " ", Model_Menu.MenuType.EMPTY));
+        listMenu1.addItem(new Model_Menu("logout", "Keluar ", Model_Menu.MenuType.MENU));
     }
     
     @SuppressWarnings("unchecked")

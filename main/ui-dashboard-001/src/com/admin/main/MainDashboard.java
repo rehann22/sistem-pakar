@@ -1,5 +1,10 @@
 package com.admin.main;
 import com.admin.controler.AdminProfile;
+import com.admin.controler.Dashboard;
+import com.admin.controler.MasterDataGejala;
+import com.admin.controler.MasterDataKonsultasiUsers;
+import com.admin.controler.MasterDataPenyakit;
+import com.admin.controler.MasterDataRelasi;
 import com.raven.main.*;
 import com.raven.event.EventMenuSelected;
 import com.admin.view.Form_A;
@@ -11,7 +16,9 @@ import com.admin.view.Form_F;
 import com.admin.view.Form_M;
 import com.admin.view.dashboard;
 import com.raven.form.Form_Home;
+import com.user.controler.TabelHasilKonsultasi;
 import java.awt.Color;
+import javaswingdev.chart.PieChart;
 import javax.swing.JComponent;
 import javax.swing.JOptionPane;
 
@@ -54,18 +61,20 @@ public class MainDashboard extends javax.swing.JFrame {
                         setForm(form_e);
                   } else if (index == 6) {
                          setForm(form_f);
-                  } else if (index == 10) {  //profile  
+                  } else if (index == 8) {
+                        refreshAll();
+                        System.out.println("refresh");
+                  }else if (index == 9) {  //profile  
                         Form_M form = new Form_M();
                         AdminProfile data = new AdminProfile();
                         data.TampilData(form.txt_id, form.txt_nama, form.txt_email, form.txt_password);
                         form.setVisible(true);
-                  } else if (index == 11) { //logout
+                  } else if (index == 12) { //logout
                         int jawaban = JOptionPane.showConfirmDialog(null, "Anda yakin ingin keluar?", "Konfirmasi", JOptionPane.YES_NO_OPTION);
                         if (jawaban == JOptionPane.YES_OPTION) {
                              System.exit(0);
                         }
                   }
-            
             }
         });
 
@@ -77,6 +86,32 @@ public class MainDashboard extends javax.swing.JFrame {
         mainPanel.add(com);
         mainPanel.repaint();
         mainPanel.revalidate();
+    }
+    
+    private void refreshAll () {
+          Dashboard dashboard = new Dashboard();
+          dashboard.totalPenyakit();
+          dashboard.totalGejala();
+          dashboard.totalRule();
+          dashboard.totalUser();
+          dashboard.tabelDashboard(admin_dashboard.tabel_dashboard);
+          
+          MasterDataPenyakit mdp = new MasterDataPenyakit();
+          mdp.showTable(form_a.tabel_penyakit);
+          
+          MasterDataGejala mdg = new MasterDataGejala();
+          mdg.showTable(form_b.tabel_gejala);
+          
+          MasterDataKonsultasiUsers dku = new MasterDataKonsultasiUsers();
+          dku.TampilIdUsers(form_f. cbb_filter);
+          dku.tampilDataFilterUser(form_f.tabel_laporan, form_f.cbb_filter.getSelectedItem().toString());
+          dku.tampilDataKonsultasiUsers(form_f.tabel_laporan);
+          
+          MasterDataRelasi dRelasi = new MasterDataRelasi();
+          dRelasi.TampilKodePenyakit(form_d.cbb_kodepenyakit);
+          dRelasi.TampilNamaPenyakit(form_d.cbb_kodepenyakit, form_d.txt_namapenyakit);
+                  
+          admin_dashboard.refreshDashboard();
     }
 
 

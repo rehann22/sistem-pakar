@@ -142,11 +142,11 @@ public class Form_D extends javax.swing.JPanel {
       // Variables declaration - do not modify//GEN-BEGIN:variables
       private swing.ButtonGradient btn_hapus;
       private swing.ButtonGradient btn_tambah;
-      private combobox.Combobox cbb_kodepenyakit;
+      public combobox.Combobox cbb_kodepenyakit;
       private javax.swing.JLabel jLabel1;
       private com.raven.swing.PanelBorder panelBorder;
       private javax.swing.JScrollPane spTable;
       private com.raven.swing.Table tabel_rule;
-      private textfield.TextField txt_namapenyakit;
+      public textfield.TextField txt_namapenyakit;
       // End of variables declaration//GEN-END:variables
 }

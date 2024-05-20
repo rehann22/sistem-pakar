@@ -23,8 +23,8 @@ public class TabelHasilKonsultasi {
           tabel.setModel(tabMode);
 
           try {
-              Connection conn = new ConnectionDb().connect();
-              String query = "SELECT tbl_hasil_diagnosa.id_konsultasi, tbl_hasil_diagnosa.kode_penyakit, tbl_penyakit.nama_penyakit, tbl_penyakit.obat ,tbl_hasil_diagnosa.tanggal FROM tbl_hasil_diagnosa INNER JOIN tbl_penyakit ON tbl_hasil_diagnosa.kode_penyakit = tbl_penyakit.kode_penyakit WHERE tbl_hasil_diagnosa.id_user = ?";
+              Connection conn = new ConnectionDb().connect();              
+              String query = "SELECT tbl_hasil_diagnosa.id_konsultasi, tbl_hasil_diagnosa.kode_penyakit, tbl_penyakit.nama_penyakit, tbl_penyakit.obat, tbl_hasil_diagnosa.tanggal FROM tbl_hasil_diagnosa INNER JOIN tbl_penyakit ON tbl_hasil_diagnosa.kode_penyakit = tbl_penyakit.kode_penyakit WHERE tbl_hasil_diagnosa.id_user = ? ORDER BY tbl_hasil_diagnosa.tanggal DESC";
               PreparedStatement ps = conn.prepareStatement(query);
               ps.setString(1, idPengguna);
               ResultSet rs = ps.executeQuery();

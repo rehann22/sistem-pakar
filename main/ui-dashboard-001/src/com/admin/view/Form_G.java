@@ -1,7 +1,9 @@
 package com.admin.view;
 
 import com.admin.controler.MasterDataPenyakit;
+import com.admin.main.MainDashboard;
 import com.formdev.flatlaf.FlatLightLaf;
+import javax.swing.JComponent;
 
 public class Form_G extends javax.swing.JFrame {
 
@@ -9,6 +11,7 @@ public class Form_G extends javax.swing.JFrame {
             initComponents();
       }
 
+      
       @SuppressWarnings("unchecked")
       // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
       private void initComponents() {
@@ -108,8 +111,8 @@ public class Form_G extends javax.swing.JFrame {
 
       private void btn_simpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_simpanActionPerformed
             MasterDataPenyakit data = new MasterDataPenyakit();
-            Form_A form = new Form_A();
-            data.simpanDataPenyakit(form.tabel_penyakit,txt_kodepenyakit, txt_namapenyakit, txt_deskripsi, txt_gejala, txt_pencegahan, txt_obat);
+            Form_A form_a = new Form_A();
+            data.simpanDataPenyakit(form_a.tabel_penyakit,txt_kodepenyakit, txt_namapenyakit, txt_deskripsi, txt_gejala, txt_pencegahan, txt_obat);
       }//GEN-LAST:event_btn_simpanActionPerformed
 
       private void btn_ubahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ubahActionPerformed

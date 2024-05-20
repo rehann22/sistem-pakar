@@ -44,7 +44,6 @@ public class Form_C extends javax.swing.JPanel {
             btn_detail = new swing.ButtonGradient();
             btn_cetak = new swing.ButtonGradient();
             txt_cari = new textfield.TextField();
-            jLabel4 = new javax.swing.JLabel();
 
             setBackground(new java.awt.Color(242, 242, 242));
             setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -77,7 +76,7 @@ public class Form_C extends javax.swing.JPanel {
             });
             spTable.setViewportView(tabel_riwayat);
 
-            panelBorder.add(spTable, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 870, 450));
+            panelBorder.add(spTable, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 870, 470));
 
             btn_detail.setText("Detail");
             btn_detail.setColor1(new java.awt.Color(40, 26, 220));
@@ -109,15 +108,6 @@ public class Form_C extends javax.swing.JPanel {
                   }
             });
             panelBorder.add(txt_cari, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 10, 120, -1));
-
-            jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/raven/icon/refresh (1).png"))); // NOI18N
-            jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-            jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
-                  public void mouseClicked(java.awt.event.MouseEvent evt) {
-                        jLabel4MouseClicked(evt);
-                  }
-            });
-            panelBorder.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 520, 30, 40));
 
             add(panelBorder, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 915, 570));
       }// </editor-fold>//GEN-END:initComponents
@@ -164,11 +154,6 @@ public class Form_C extends javax.swing.JPanel {
 //                  JasperViewer.viewReport(jp, false); // false untuk menutup aplikasi tanpa menutup laporan
       }//GEN-LAST:event_btn_cetakActionPerformed
 
-      private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-            TabelHasilKonsultasi data = new TabelHasilKonsultasi();
-            data.showTable(logId, tabel_riwayat);
-      }//GEN-LAST:event_jLabel4MouseClicked
-
       private void txt_cariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_cariKeyPressed
             int kode = evt.getKeyCode();
             if (kode == evt.VK_ENTER) {
@@ -182,7 +167,6 @@ public class Form_C extends javax.swing.JPanel {
       private swing.ButtonGradient btn_cetak;
       private swing.ButtonGradient btn_detail;
       private javax.swing.JLabel jLabel1;
-      private javax.swing.JLabel jLabel4;
       private com.raven.swing.PanelBorder panelBorder;
       private javax.swing.JScrollPane spTable;
       public com.raven.swing.Table tabel_riwayat;

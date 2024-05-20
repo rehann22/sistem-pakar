@@ -2,6 +2,7 @@ package com.user.main;
 import com.raven.event.EventMenuSelected;
 import com.user.controler.EditProfile;
 import com.user.controler.SessionUser;
+import com.user.controler.TabelHasilKonsultasi;
 import com.user.view.Dashboard;
 import com.user.view.Form_A;
 import com.user.view.Form_B;
@@ -27,10 +28,6 @@ public class MainDashboard extends javax.swing.JFrame {
             form_b = new Form_B();
             form_c = new Form_C();
             
-            Form_F form_f = new Form_F();
-            EditProfile data = new EditProfile();
-            form_f.txt_id.setText(LogId);
-            
             menu.initMoving(MainDashboard.this);
             menu.addEventMenuSelected(new EventMenuSelected() {
             @Override
@@ -43,15 +40,22 @@ public class MainDashboard extends javax.swing.JFrame {
                       setForm(form_b);
                   } else if (index == 3) {
                       setForm(form_c);
-                  } else if (index == 7) {
+                  } else if (index == 4) {
+                          TabelHasilKonsultasi data = new TabelHasilKonsultasi();
+                          data.showTable(LogId, form_c.tabel_riwayat);
+                  
+                  } else if (index == 5) {
+                        Form_F form_f = new Form_F();
+                        EditProfile data = new EditProfile();
+                        form_f.txt_id.setText(LogId);
                         data.tampiDataUser(form_f.txt_id, form_f.txt_nama, form_f.txt_username, form_f.txt_password);
                         form_f.setVisible(true);
                   } else if (index == 8) {
                       int jawaban = JOptionPane.showConfirmDialog(null, "Anda yakin ingin keluar?", "Konfirmasi", JOptionPane.YES_NO_OPTION);
                       if (jawaban == JOptionPane.YES_OPTION) {
                           System.exit(0);
-                      }
-                  }
+                     }
+                  } 
             }
         });
         

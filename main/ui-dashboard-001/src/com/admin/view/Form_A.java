@@ -1,12 +1,8 @@
 package com.admin.view;
 
 import com.admin.controler.MasterDataPenyakit;
-import com.admin.controler.TabelPertanyaan;
-import com.raven.model.Model_Card;
-import com.raven.model.StatusType;
 import com.raven.swing.ScrollBar;
 import java.awt.Color;
-import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
@@ -37,7 +33,6 @@ public class Form_A extends javax.swing.JPanel {
             btn_tambah = new swing.ButtonGradient();
             btn_hapus = new swing.ButtonGradient();
             btn_ubah = new swing.ButtonGradient();
-            jLabel4 = new javax.swing.JLabel();
 
             setBackground(new java.awt.Color(242, 242, 242));
             setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -102,16 +97,6 @@ public class Form_A extends javax.swing.JPanel {
             });
             panelBorder.add(btn_ubah, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 30, 110, 30));
 
-            jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/raven/icon/refresh (1).png"))); // NOI18N
-            jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-            jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
-                  public void mouseClicked(java.awt.event.MouseEvent evt) {
-                        jLabel4MouseClicked(evt);
-                  }
-            });
-            panelBorder.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 520, 30, 40));
-            jLabel4.getAccessibleContext().setAccessibleParent(this);
-
             add(panelBorder, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 915, 570));
       }// </editor-fold>//GEN-END:initComponents
 
@@ -137,18 +122,12 @@ public class Form_A extends javax.swing.JPanel {
             data.hapusPenyakit(tabel_penyakit, form.txt_kodepenyakit);
       }//GEN-LAST:event_btn_hapusActionPerformed
 
-      private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-            MasterDataPenyakit data = new MasterDataPenyakit();
-            data.showTable(tabel_penyakit);
-      }//GEN-LAST:event_jLabel4MouseClicked
-
 
       // Variables declaration - do not modify//GEN-BEGIN:variables
       private swing.ButtonGradient btn_hapus;
       private swing.ButtonGradient btn_tambah;
       private swing.ButtonGradient btn_ubah;
       private javax.swing.JLabel jLabel1;
-      private javax.swing.JLabel jLabel4;
       private com.raven.swing.PanelBorder panelBorder;
       private javax.swing.JScrollPane spTable;
       public com.raven.swing.Table tabel_penyakit;
