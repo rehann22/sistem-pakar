@@ -116,7 +116,7 @@ public class Form_C extends javax.swing.JPanel {
             TabelHasilKonsultasi data = new TabelHasilKonsultasi();
             Form_E form = new Form_E();
             form.txt_namapeternak.setText(logName);
-            data.DetailHasilKonsultasi(tabel_riwayat, form.txt_namapeternak, form.txt_namapenyakit, form.txt_deskripsi, form.txt_gejala, form.txt_pencegahan, form.txt_obat, form.txt_tanggal);
+            data.DetailHasilKonsultasi(tabel_riwayat,form.txt_kodekonsultasi, form.txt_namapeternak, form.txt_namapenyakit, form.txt_deskripsi, form.txt_gejala, form.txt_pencegahan, form.txt_obat, form.txt_tanggal);
             form.setVisible(true);
       }//GEN-LAST:event_btn_detailActionPerformed
 

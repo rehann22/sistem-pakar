@@ -1,5 +1,4 @@
 package com.user.view;
-import com.formdev.flatlaf.FlatLightLaf;
 
 import com.formdev.flatlaf.FlatLightLaf;
 import com.user.controler.EditProfile;

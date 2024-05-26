@@ -67,7 +67,7 @@ public class Form_E extends javax.swing.JPanel {
                         return canEdit [columnIndex];
                   }
             });
-            tabel_pertanyaan.setSelectionBackground(new java.awt.Color(180, 212, 255));
+            tabel_pertanyaan.setSelectionBackground(new java.awt.Color(209, 18, 235));
             spTable.setViewportView(tabel_pertanyaan);
 
             panelBorder.add(spTable, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 870, 480));

@@ -52,18 +52,34 @@ public class TabelHasilKonsultasi {
           tabel.getColumnModel().getColumn(4).setPreferredWidth(120);
       }
       
-      public void DetailHasilKonsultasi (JTable clickTable, JTextField namaPeternak, JTextField namaPenyakit, JTextArea deskripsi, JTextArea gejala, JTextArea pencegahan, JTextField obat, JTextField tanggal) {
+      public void DetailHasilKonsultasi (JTable clickTable, JTextField IdKons, JTextField namaPeternak, JTextField namaPenyakit, JTextArea deskripsi, JTextArea gejala, JTextArea pencegahan, JTextField obat, JTextField tanggal) {
           try {
               int selectedRow = clickTable.getSelectedRow();
-              String kodePenyakit = clickTable.getValueAt(selectedRow, 1).toString();
+              String kodePenyakit = clickTable.getValueAt(selectedRow, 0).toString();
               System.out.println(kodePenyakit);
               Connection conn = new ConnectionDb().connect();
-              String query = "SELECT tbl_hasil_diagnosa.kode_penyakit, tbl_penyakit.nama_penyakit, tbl_penyakit.deskripsi, tbl_penyakit.gejala, tbl_penyakit.pencegahan, tbl_penyakit.obat, tbl_hasil_diagnosa.tanggal FROM tbl_hasil_diagnosa INNER JOIN tbl_penyakit ON tbl_hasil_diagnosa.kode_penyakit = tbl_penyakit.kode_penyakit WHERE tbl_hasil_diagnosa.kode_penyakit = ? ";
+              String query = "SELECT \n" +
+                              "    tbl_hasil_diagnosa.id_konsultasi,\n" +
+                              "    tbl_hasil_diagnosa.kode_penyakit, \n" +
+                              "    tbl_penyakit.nama_penyakit, \n" +
+                              "    tbl_penyakit.deskripsi, \n" +
+                              "    tbl_penyakit.gejala, \n" +
+                              "    tbl_penyakit.pencegahan, \n" +
+                              "    tbl_penyakit.obat, \n" +
+                              "    tbl_hasil_diagnosa.tanggal \n" +
+                              "FROM \n" +
+                              "    tbl_hasil_diagnosa \n" +
+                              "INNER JOIN \n" +
+                              "    tbl_penyakit \n" +
+                              "ON \n" +
+                              "    tbl_hasil_diagnosa.kode_penyakit = tbl_penyakit.kode_penyakit \n" +
+                              "WHERE \n" +
+                              "    tbl_hasil_diagnosa.id_konsultasi = ?";
               PreparedStatement ps = conn.prepareStatement(query);
               ps.setString(1, kodePenyakit);
               ResultSet rs = ps.executeQuery();
 
-              String[] data = new String[7];
+              String[] data = new String[8];
               if (rs.next()) {
                   data[0] = rs.getString("kode_penyakit");
                   data[1] = rs.getString("nama_penyakit");
@@ -72,7 +88,9 @@ public class TabelHasilKonsultasi {
                   data[4] = rs.getString("pencegahan");
                   data[5] = rs.getString("obat");
                   data[6] = rs.getString("tanggal");
+                  data[7] = rs.getString("id_konsultasi");
               }
+              IdKons.setText(data[7]);
 
               namaPeternak.setText(logName);
               namaPenyakit.setText(data[1]);
@@ -89,7 +107,7 @@ public class TabelHasilKonsultasi {
 
           } catch (SQLException ex) {
               System.out.println(ex);
-              System.out.println("Error di displayDataOnLabel");
+              System.out.println("Error detail hasil konsultasi");
           }
       }      
       
