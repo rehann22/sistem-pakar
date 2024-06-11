@@ -1,7 +1,6 @@
 package com.user.main;
 
 import com.formdev.flatlaf.extras.FlatSVGIcon;
-import com.raven.main.Main;
 import com.user.controler.LoginUser;
 import com.user.controler.RegisterUser;
 import javax.swing.JOptionPane;

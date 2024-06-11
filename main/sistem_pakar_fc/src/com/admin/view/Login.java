@@ -2,14 +2,14 @@ package com.admin.view;
 
 import com.admin.controler.AdminLogin;
 import com.formdev.flatlaf.extras.FlatSVGIcon;
-import com.raven.main.Main;
 import javax.swing.JOptionPane;
+import com.admin.main.MainDashboard;
 
 public class Login extends javax.swing.JFrame {
 
       public Login() {
             initComponents();
-            icon.setIcon(new FlatSVGIcon("com/raven/icon/fishing with net-rafiki.svg", icon.getWidth(), icon.getHeight()));
+            icon.setIcon(new FlatSVGIcon("com/icon/fishing with net-rafiki.svg", icon.getWidth(), icon.getHeight()));
             
       }
       
@@ -102,13 +102,13 @@ public class Login extends javax.swing.JFrame {
                 }
             }
             } catch (ClassNotFoundException ex) {
-                java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+                java.util.logging.Logger.getLogger(MainDashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
             } catch (InstantiationException ex) {
-                java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+                java.util.logging.Logger.getLogger(MainDashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
             } catch (IllegalAccessException ex) {
-                java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+                java.util.logging.Logger.getLogger(MainDashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
             } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-                java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+                java.util.logging.Logger.getLogger(MainDashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
             }
             //</editor-fold>
                   java.awt.EventQueue.invokeLater(new Runnable() {
