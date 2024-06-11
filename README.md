@@ -1,1 +1,1 @@
-Sistem Pakar Diagnosa Penyakit Ikan
+Sistem Pakar Diagnosa Penyakit Ikan Mas Metode Forward Chaining 
