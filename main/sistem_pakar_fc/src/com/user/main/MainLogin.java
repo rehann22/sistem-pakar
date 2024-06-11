@@ -4,14 +4,15 @@ import com.formdev.flatlaf.extras.FlatSVGIcon;
 import com.user.controler.LoginUser;
 import com.user.controler.RegisterUser;
 import javax.swing.JOptionPane;
+import com.user.main.MainDashboard;
 
 public class MainLogin extends javax.swing.JFrame {
 
       public MainLogin() {
             initComponents();
             txt_username_login.requestFocusInWindow();
-            icon.setIcon(new FlatSVGIcon("com/raven/icon/fishing with net-rafiki.svg", icon.getWidth(), icon.getHeight()));
-            icon_regist.setIcon(new FlatSVGIcon("com/raven/icon/instagram.svg", icon_regist.getWidth(), icon_regist.getHeight()));
+            icon.setIcon(new FlatSVGIcon("com/icon/fishing with net-rafiki.svg", icon.getWidth(), icon.getHeight()));
+            icon_regist.setIcon(new FlatSVGIcon("com/icon/instagram.svg", icon_regist.getWidth(), icon_regist.getHeight()));
       }
       
       private void btnRegisterOnClick () {
@@ -223,13 +224,13 @@ public class MainLogin extends javax.swing.JFrame {
                 }
             }
             } catch (ClassNotFoundException ex) {
-                java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+                java.util.logging.Logger.getLogger(MainDashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
             } catch (InstantiationException ex) {
-                java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+                java.util.logging.Logger.getLogger(MainDashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
             } catch (IllegalAccessException ex) {
-                java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+                java.util.logging.Logger.getLogger(MainDashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
             } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-                java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+                java.util.logging.Logger.getLogger(MainDashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
             }
             //</editor-fold>
                   java.awt.EventQueue.invokeLater(new Runnable() {
